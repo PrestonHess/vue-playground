@@ -28,12 +28,11 @@
                         property(isActive) to true. Notice Vue will rerender each time the value changes.</p>
                     <div class="red">
                         <!-- add a class binding attribute to the p tag -->
-                        <p>This text will turn green on active</p>
+                        <p :class="{ active: isActive }">This text will turn green on active</p>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
 </template>
 
@@ -46,7 +45,7 @@
                 //create a property called myName and set its value to "type your name here"
                 message: "Super secret message here!",
                 //change isActive to true 
-                isActive: false,
+                isActive: true,
                 myName: "type your name here"
             }
         }
