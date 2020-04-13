@@ -9,8 +9,7 @@
                         the curlies.
                         Check out what happens below. Now go change the value of message in our components script area
                         and see what happens.</p>
-                    <p> {{
-                        <!-- Add your code inside the curlies --> }}</p>
+                    <p> {{ message }}</p>
                 </div>
                 <div class="border p-1">
                     <h5>Two Way Data Binding</h5>
@@ -18,9 +17,9 @@
                         Then reference that data property in the html to display the value. Notice Vue will rerender
                         each time the value changes.</p>
                     <!-- add a v-model to this input below called "myName"-->
-                    <input>
+                    <input v-model="myName">
                     <p> {{
-                        <!-- Add your code inside the curlies --> }}</p>
+                        myName }}</p>
                 </div>
                 <div class="border p-1">
                     <h5>Class Binding</h5>
@@ -47,7 +46,8 @@
                 //create a property called myName and set its value to "type your name here"
                 message: "Super secret message here!",
                 //change isActive to true 
-                isActive: false
+                isActive: false,
+                myName: "type your name here"
             }
         }
     }
